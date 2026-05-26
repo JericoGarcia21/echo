@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+  import { useState, useEffect } from 'react';
 import Dock from './components/Dock';
 import DraggableWindow from './components/DraggableWindow';
 import SkillsApp from './components/SkillsApp';
@@ -7,14 +7,12 @@ import CertificationsApp from './components/CertificationsApp';
 import ContactApp from './components/ContactApp';
 import TopBar from './components/TopBar';
 
-import DesktopIcon from './components/DesktopIcon';
 import ContextMenu from './components/ContextMenu';
 import { LiveGitFeed, SystemLogs } from './components/Widgets';
 import ProjectsApp from './components/ProjectsApp';
 import TerminalApp from './components/TerminalApp';
 import AboutApp from './components/AboutApp';
 import AssistantApp from './components/AssistantApp';
-import { FileText, Trash2 } from 'lucide-react';
 import './App.css';
 
 function App() {
@@ -24,7 +22,6 @@ function App() {
   const [activeWindow, setActiveWindow] = useState<string | null>('terminal');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number; show: boolean }>({ x: 0, y: 0, show: false });
-  const [selectedDesktopIcon, setSelectedDesktopIcon] = useState<string | null>(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -92,26 +89,8 @@ function App() {
     }
   };
 
-  const handleDesktopClick = () => setSelectedDesktopIcon(null);
-
   return (
-    <div className="os-desktop" onContextMenu={handleContextMenu} onClick={handleDesktopClick}>
-      {/* Desktop Icons */}
-      <DesktopIcon
-        icon={<FileText size={32} />}
-        label="Resume.pdf"
-        top={60} left={20}
-        isSelected={selectedDesktopIcon === 'resume_pdf'}
-        onClick={(e) => { e.stopPropagation(); setSelectedDesktopIcon('resume_pdf'); toggleWindow('resume_pdf'); }}
-      />
-      <DesktopIcon
-        icon={<Trash2 size={32} />}
-        label="Trash"
-        top={160} left={20}
-        isSelected={selectedDesktopIcon === 'trash_bin'}
-        onClick={(e) => { e.stopPropagation(); setSelectedDesktopIcon('trash_bin'); toggleWindow('trash_bin'); }}
-      />
-
+    <div className="os-desktop" onContextMenu={handleContextMenu}>
       {/* Widgets */}
       <LiveGitFeed />
       <SystemLogs />
@@ -189,54 +168,6 @@ function App() {
           closeOnly={true}
         >
           <ProjectsApp />
-        </DraggableWindow>
-
-        {/* RESUME */}
-        <DraggableWindow
-          id="resume_pdf"
-          title="📄 Resume.pdf"
-          isOpen={!!openWindows['resume_pdf']}
-          isActive={activeWindow === 'resume_pdf'}
-          onClose={() => toggleWindow('resume_pdf')}
-          onFocus={() => focusWindow('resume_pdf')}
-          defaultPosition={{ x: 250, y: 100 }}
-          defaultSize={{ width: 500, height: 380 }}
-          closeOnly={true}
-        >
-          <div className="coming-soon-container" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', gap: '1rem' }}>
-            <FileText size={64} style={{ color: 'var(--accent-cyan)', opacity: 0.8, marginBottom: '0.5rem' }} />
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700 }}>Resume Under Development</h2>
-            <p style={{ color: 'var(--text-muted)', maxWidth: '80%' }}>
-              I'm currently updating my latest certifications and achievements. <br/>
-              The full CV will be available for download here soon!
-            </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
-              <button 
-                onClick={() => toggleWindow('contact')}
-                style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', padding: '0.6rem 1.5rem', borderRadius: '8px', background: 'rgba(var(--accent-cyan-rgb),0.12)', color: 'var(--accent-cyan)', border: '1px solid rgba(var(--accent-cyan-rgb),0.3)', fontWeight: 600, fontSize: '0.85rem' }}>
-                📬 Request Copy via Contact
-              </button>
-            </div>
-          </div>
-        </DraggableWindow>
-
-        {/* TRASH */}
-        <DraggableWindow
-          id="trash_bin"
-          title="🗑 Trash"
-          isOpen={!!openWindows['trash_bin']}
-          isActive={activeWindow === 'trash_bin'}
-          onClose={() => toggleWindow('trash_bin')}
-          onFocus={() => focusWindow('trash_bin')}
-          defaultPosition={{ x: 350, y: 250 }}
-          defaultSize={{ width: 400, height: 260 }}
-          closeOnly={true}
-        >
-          <div className="coming-soon-container">
-            <Trash2 size={48} className="coming-soon-icon" />
-            <h2>Trash</h2>
-            <p>Trash is empty. 🧹</p>
-          </div>
         </DraggableWindow>
 
         {/* ABOUT ME */}

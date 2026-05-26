@@ -1,88 +1,79 @@
 .os-desktop {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background-color: var(--bg-color);
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(var(--accent-cyan-rgb), 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(var(--accent-blue-rgb), 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(var(--accent-cyan-rgb), 0.15) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(var(--accent-blue-rgb), 0.15) 0px, transparent 50%);
-  background-size: 100% 100%;
-  transition: background 0.5s ease;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    background-image: url('./assets/wallpaper.svg');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 0.5s ease;
 }
-
 
 .os-workspace {
-  position: absolute;
-  top: 28px; /* Leave room for TopBar */
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 90px); /* Tighter: dock is only 8px from bottom now */
-  pointer-events: none;
-  z-index: 10;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    pointer-events: none;
+    z-index: 10;
 }
 
-/* ...but catch them on actual windows */
 .os-workspace > * {
-  pointer-events: auto; 
+    pointer-events: auto;
 }
-
-
-
 
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .coming-soon-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
-  gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    gap: 1.5rem;
 }
 
 .coming-soon-icon {
-  color: var(--accent-cyan);
-  opacity: 0.8;
-  animation: float 3s ease-in-out infinite;
+    color: var(--accent-cyan);
+    opacity: 0.8;
+    animation: float 3s ease-in-out infinite;
 }
 
 .coming-soon-container h2 {
-  font-size: 1.8rem;
-  background: linear-gradient(to right, var(--accent-cyan), var(--accent-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+    font-size: 1.8rem;
+    background: linear-gradient(to right, var(--accent-cyan), var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .coming-soon-container p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  max-width: 400px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 400px;
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
 @media (max-width: 768px) {
-  .os-workspace {
-    top: 36px; /* taller mobile topbar */
-    height: calc(100dvh - 36px - 115px); /* below topbar, above 2-row dock */
-  }
+    .os-workspace {
+        top: 36px;
+        height: calc(100dvh - 36px - 115px);
+    }
 
-  /* Hide desktop icons on mobile — they'd overlap open windows */
-  .desktop-icon {
-    display: none;
-  }
+    .desktop-icon {
+        display: none;
+    }
 }
-

@@ -11,7 +11,7 @@ interface Message {
 
 const SYSTEM_PROMPT = `You are E.C.H.O, the digital assistant for Jerico B. Garcia's portfolio operating system. 
 Jerico is a Full-Stack Web & Mobile Developer and an IT Instructor at Universidad de Dagupan. He holds a BSIT and is currently an MIT Candidate.
-His skills include React, Node.js, Next.js, and Mobile Development (Flutter/React Native).
+His skills include React, PHP, Laravel, HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, Node.js with Express, Dart, Flutter, MySQL, MongoDB, Firebase, C++, Python Flask, Java, and Java GUI.
 Your tone should be helpful, slightly futuristic, professional, and concise. 
 If the user asks who you are, introduce yourself as E.C.H.O.`;
 
@@ -164,4 +164,3 @@ const AssistantApp: React.FC = () => {
 };
 
 export default AssistantApp;
-
