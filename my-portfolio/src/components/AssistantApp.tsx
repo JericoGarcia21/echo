@@ -15,6 +15,32 @@ His skills include React, PHP, Laravel, HTML, CSS, JavaScript, Tailwind CSS, Boo
 Your tone should be helpful, slightly futuristic, professional, and concise. 
 If the user asks who you are, introduce yourself as E.C.H.O.`;
 
+const getLocalResponse = (text: string) => {
+  const query = text.toLowerCase();
+
+  if (query.includes('who is jerico') || query.includes('about jerico')) {
+    return 'Jerico B. Garcia is a Full-Stack Web & Mobile Developer and IT Instructor at Universidad de Dagupan. He is a BSIT graduate, currently an MIT candidate, and builds web, mobile, AI-assisted, and computer-vision projects.';
+  }
+
+  if (query.includes('skill') || query.includes('tech')) {
+    return 'Jerico works with React, Node.js, Laravel, PHP, Flutter, Firebase, Java, C++, Python Flask, MongoDB, MySQL, Tailwind CSS, Bootstrap, Docker, Postman, Figma, WordPress, Gemini AI, Antigravity, and Kiro.';
+  }
+
+  if (query.includes('contact') || query.includes('email') || query.includes('linkedin') || query.includes('github')) {
+    return 'Contact details: email jbgarcia@psuuc.edu.ph, GitHub github.com/psuuc-jbgarcia, LinkedIn linkedin.com/in/jbgarcia.';
+  }
+
+  if (query.includes('project')) {
+    return 'Jerico has built projects including an AI-powered essay evaluation system, a smart parking system with plate recognition, barangay document request and recipe systems with chatbots, mobile recipe and quiz apps, and inventory management tools.';
+  }
+
+  if (query.includes('who are you') || query.includes('what are you')) {
+    return 'I am E.C.H.O, the digital assistant for Jerico B. Garcia\'s portfolio operating system.';
+  }
+
+  return 'E.C.H.O local knowledge mode is active. I can answer questions about Jerico B. Garcia, including his background, skills, projects, and contact details.';
+};
+
 const AssistantApp: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -51,7 +77,7 @@ const AssistantApp: React.FC = () => {
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
     if (!apiKey) {
-      return "ERROR: Gemini API Key not found. Please add VITE_GEMINI_API_KEY to your .env file.";
+      return getLocalResponse(text);
     }
 
     try {
@@ -72,13 +98,17 @@ const AssistantApp: React.FC = () => {
         body: JSON.stringify(payload)
       });
 
+      if (!response.ok) {
+        throw new Error(`Gemini request failed with status ${response.status}`);
+      }
+
       const data = await response.json();
       if (data.error) throw new Error(data.error.message);
 
-      return data.candidates[0].content.parts[0].text;
-    } catch (err: any) {
+      return data.candidates?.[0]?.content?.parts?.[0]?.text ?? getLocalResponse(text);
+    } catch (err) {
       console.error(err);
-      return "Network protocol failure. Could not connect to Gemini reasoning engine.";
+      return getLocalResponse(text);
     }
   };
 
