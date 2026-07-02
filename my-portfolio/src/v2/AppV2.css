@@ -439,7 +439,7 @@ body:has(.v2-shell) {
   line-height: 1.05;
 }
 
-.v2-senior-overview {
+.v2-engineering-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
   gap: 1rem;
@@ -862,7 +862,7 @@ body:has(.v2-shell) {
   .v2-skill-grid,
   .v2-cert-grid,
   .v2-focus-strip,
-  .v2-senior-overview,
+  .v2-engineering-overview,
   .v2-principle-grid,
   .v2-section-heading {
     grid-template-columns: 1fr;

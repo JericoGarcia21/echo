@@ -65,7 +65,7 @@ function AppV2() {
           </div>
           <h1>{profile.name}</h1>
           <div className="v2-hero-title">
-            <span>Senior {profile.title}</span>
+            <span>{profile.title}</span>
             <strong>Web <i aria-hidden="true" /> Mobile</strong>
           </div>
           <p className="v2-hero-summary">
@@ -159,7 +159,7 @@ function AppV2() {
         </aside>
       </section>
 
-      <section className="v2-section v2-senior-overview" aria-label="Senior engineering overview">
+      <section className="v2-section v2-engineering-overview" aria-label="Engineering overview">
         <div className="v2-lead-panel">
           <span><Terminal size={16} /> Engineering Profile</span>
           <h2>Product-focused execution with full-stack ownership.</h2>
@@ -271,7 +271,7 @@ function AppV2() {
       <section className="v2-section v2-principles" aria-label="Engineering principles">
         <div className="v2-section-heading">
           <span><Cpu size={16} /> Engineering Standards</span>
-          <h2>How I think about senior-level delivery.</h2>
+          <h2>How I think about reliable project delivery.</h2>
         </div>
         <div className="v2-principle-grid">
           {engineeringPrinciples.map((principle, index) => (
