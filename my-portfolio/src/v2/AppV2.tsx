@@ -26,15 +26,15 @@ const featuredProjects = projects.filter((project) => project.featured);
 const otherProjects = projects.filter((project) => !project.featured);
 
 const engineeringPrinciples = [
-  'Design the user workflow before writing the interface.',
-  'Keep data models, API boundaries, and UI states easy to reason about.',
-  'Build maintainable systems that another developer can continue confidently.',
+  'Start with what the user needs.',
+  'Keep the code organized and easy to update.',
+  'Build features that are simple to use.',
 ];
 
 const deliverySignals = [
-  { label: 'Primary Focus', value: 'Web + Mobile' },
-  { label: 'Engineering Style', value: 'Product-minded' },
-  { label: 'System Strength', value: 'Full-stack delivery' },
+  { label: 'Main Focus', value: 'Web + Mobile' },
+  { label: 'Work Style', value: 'Simple and practical' },
+  { label: 'Strength', value: 'Frontend, backend, and mobile' },
 ];
 
 function AppV2() {
@@ -69,8 +69,8 @@ function AppV2() {
             <strong>Web <i aria-hidden="true" /> Mobile</strong>
           </div>
           <p className="v2-hero-summary">
-            I build production-minded web and mobile systems with practical architecture,
-            clear interfaces, and maintainable full-stack foundations.
+            I build websites and mobile apps with clean layouts, useful features,
+            and code that is easy to maintain.
           </p>
           <div className="v2-hero-actions">
             <a className="v2-button primary" href="#projects">
@@ -94,18 +94,18 @@ function AppV2() {
           <div className="v2-build-modes" aria-label="Development focus">
             <article>
               <Globe2 size={20} />
-              <span>Website Engineering</span>
-              <strong>React interfaces, dashboards, portfolios, and app workflows</strong>
+              <span>Websites</span>
+              <strong>React pages, dashboards, portfolios, and web apps</strong>
             </article>
             <article>
               <Smartphone size={20} />
-              <span>Mobile Engineering</span>
-              <strong>Flutter apps, Firebase flows, and API-connected experiences</strong>
+              <span>Mobile Apps</span>
+              <strong>Flutter apps connected with Firebase and APIs</strong>
             </article>
             <article>
               <Cpu size={20} />
-              <span>Systems Thinking</span>
-              <strong>APIs, AI tools, databases, and deployment-aware decisions</strong>
+              <span>Backend</span>
+              <strong>APIs, databases, and simple backend features</strong>
             </article>
           </div>
         </div>
@@ -118,7 +118,7 @@ function AppV2() {
             <div>
               <p className="v2-panel-eyebrow">Currently</p>
               <h2>{profile.subtitle}</h2>
-              <p>Building web, mobile, AI-assisted, and teaching-focused systems.</p>
+              <p>Building web and mobile projects, plus tools for learning and teaching.</p>
             </div>
             <div className="v2-socials">
               <a href={profile.links.github} target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -161,12 +161,11 @@ function AppV2() {
 
       <section className="v2-section v2-engineering-overview" aria-label="Engineering overview">
         <div className="v2-lead-panel">
-          <span><Terminal size={16} /> Engineering Profile</span>
-          <h2>Product-focused execution with full-stack ownership.</h2>
+          <span><Terminal size={16} /> Profile</span>
+          <h2>I build practical web and mobile projects.</h2>
           <p>
-            This portfolio is organized around delivery: understanding the user problem,
-            selecting a practical stack, building the workflow, and keeping the system readable
-            enough to improve over time.
+            This portfolio shows the projects I have built, the tools I use,
+            and the kind of work I enjoy doing.
           </p>
         </div>
         <div className="v2-signal-grid">
@@ -182,40 +181,40 @@ function AppV2() {
       <section className="v2-section v2-stats" aria-label="Portfolio metrics">
         <div>
           <strong>{projects.length}+</strong>
-          <span>Delivered portfolio systems</span>
+          <span>Portfolio projects</span>
         </div>
         <div>
           <strong>{skills.reduce((total, group) => total + group.items.length, 0)}+</strong>
-          <span>Technologies across the stack</span>
+          <span>Technologies and tools</span>
         </div>
         <div>
           <strong>{certifications.length}</strong>
-          <span>Verified technical credentials</span>
+          <span>Certifications</span>
         </div>
       </section>
 
       <section className="v2-section v2-focus-strip" aria-label="Core services">
         <article>
           <MonitorSmartphone size={22} />
-          <h3>Product Interfaces</h3>
-          <p>Responsive React experiences with clear flows, readable layouts, and practical polish.</p>
+          <h3>Web Interfaces</h3>
+          <p>Responsive pages and app screens that are clean and easy to use.</p>
         </article>
         <article>
           <Database size={22} />
-          <h3>Full-Stack Systems</h3>
-          <p>API-backed applications using Node, PHP, Laravel, MongoDB, MySQL, and Firebase.</p>
+          <h3>Web Apps</h3>
+          <p>Apps with frontend, backend, database, and API features.</p>
         </article>
         <article>
           <Terminal size={22} />
-          <h3>Applied Learning</h3>
-          <p>Teaching-friendly tools, documentation-minded code, and systems that explain themselves.</p>
+          <h3>Learning Tools</h3>
+          <p>Projects that help with teaching, practice, and everyday tasks.</p>
         </article>
       </section>
 
       <section className="v2-section" id="projects">
         <div className="v2-section-heading">
-          <span><Rocket size={16} /> Selected Work</span>
-          <h2>Case-study projects with architecture, workflow, and delivery context.</h2>
+          <span><Rocket size={16} /> Projects</span>
+          <h2>Some projects I have worked on.</h2>
         </div>
 
         <div className="v2-featured-grid">
@@ -237,8 +236,8 @@ function AppV2() {
                 {project.tech.map((tech) => <span key={tech}>{tech}</span>)}
               </div>
               <ul className="v2-project-points">
-                <li><CheckCircle2 size={15} /> Practical user workflow</li>
-                <li><CheckCircle2 size={15} /> Production-minded stack</li>
+                <li><CheckCircle2 size={15} /> Useful features</li>
+                <li><CheckCircle2 size={15} /> Clean project structure</li>
               </ul>
               <div className="v2-card-links">
                 {project.links.map((link) => (
@@ -270,8 +269,8 @@ function AppV2() {
 
       <section className="v2-section v2-principles" aria-label="Engineering principles">
         <div className="v2-section-heading">
-          <span><Cpu size={16} /> Engineering Standards</span>
-          <h2>How I think about reliable project delivery.</h2>
+          <span><Cpu size={16} /> Work Approach</span>
+          <h2>How I like to build projects.</h2>
         </div>
         <div className="v2-principle-grid">
           {engineeringPrinciples.map((principle, index) => (
@@ -285,8 +284,8 @@ function AppV2() {
 
       <section className="v2-section v2-two-column" id="skills">
         <div className="v2-section-heading">
-          <span><Code2 size={16} /> Capability Map</span>
-          <h2>Full-stack foundation with mobile and support depth.</h2>
+          <span><Code2 size={16} /> Skills</span>
+          <h2>Technologies I use for web, mobile, and support work.</h2>
         </div>
         <div className="v2-skill-grid">
           {skills.map((group) => (
@@ -303,7 +302,7 @@ function AppV2() {
       <section className="v2-section v2-two-column" id="experience">
         <div className="v2-section-heading">
           <span><BriefcaseBusiness size={16} /> Experience</span>
-          <h2>Teaching, building, and translating technical ideas clearly.</h2>
+          <h2>Experience in teaching and building projects.</h2>
         </div>
         <div className="v2-timeline">
           {experience.map((item) => (
@@ -323,7 +322,7 @@ function AppV2() {
       <section className="v2-section" id="certifications">
         <div className="v2-section-heading">
           <span><Award size={16} /> Certifications</span>
-          <h2>Proof points from assessments and technical programs.</h2>
+          <h2>Certificates and test results.</h2>
         </div>
         <div className="v2-cert-grid">
           {certifications.map((cert) => (
@@ -342,8 +341,8 @@ function AppV2() {
 
       <section className="v2-contact" id="contact">
         <div>
-          <span className="v2-contact-label">Let us build something useful.</span>
-          <h2>Open to web, mobile, portfolio, and teaching-tech projects.</h2>
+          <span className="v2-contact-label">Want to work together?</span>
+          <h2>Open to web, mobile, portfolio, and teaching-related projects.</h2>
         </div>
         <div className="v2-contact-actions">
           <a className="v2-button primary" href={profile.links.email}>

@@ -20,7 +20,7 @@ export const profile = {
   location: 'Santa Barbara, Pangasinan',
   image: '/hero-image.jpg',
   summary:
-    'BSIT graduate majoring in Web and Mobile Technologies, currently pursuing a Master in Information Technology at Universidad de Dagupan. I build practical web, mobile, AI-assisted, and computer-vision applications with a focus on useful interfaces and maintainable systems.',
+    'BSIT graduate focused on web and mobile development, currently taking Master in Information Technology at Universidad de Dagupan. I build websites, mobile apps, and simple tools that are useful and easy to understand.',
   availability: 'Available for web and mobile projects',
   email: 'garciajerico217@gmail.com',
   links: {
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     title: 'AI-Powered Essay Evaluation and Scoring System',
     type: 'AI Web Application',
     description:
-      'A teacher-focused platform for evaluating handwritten and digital essays with automated scoring, feedback workflows, and deployment-ready tooling.',
+      'A web app that helps teachers check handwritten and digital essays with scoring and feedback features.',
     tech: ['React', 'Node.js', 'MongoDB', 'Gemini AI', 'PWA', 'Tailwind CSS', 'Docker'],
     links: [{ label: 'GitHub', url: 'https://github.com/JericoGarcia21/pen2grade' }],
     featured: true,
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     title: 'EvalSys',
     type: 'Evaluation Platform',
     description:
-      'A MERN application for student project presentation evaluation with structured scoring and streamlined assessment management.',
+      'A web app for evaluating student project presentations with organized scoring.',
     tech: ['MongoDB', 'Express', 'React', 'Node.js'],
     links: [
       { label: 'GitHub', url: 'https://github.com/JericoGarcia21/evalsys.git' },
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     title: 'Smart Parking Management System',
     type: 'Mobile and Web App',
     description:
-      'A parking management system with plate number recognition, Firebase-backed mobile workflows, and computer-vision processing.',
+      'A mobile and web project for parking management with plate number recognition.',
     tech: ['Flutter', 'Firebase', 'Python', 'YOLO', 'Flask', 'Computer Vision'],
     links: [
       { label: 'User Side', url: 'https://github.com/JericoGarcia21/parkwatch_app' },
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     title: 'jobprep',
     type: 'Ongoing AI Project',
     description:
-      'An AI-powered job application and mock interview preparation tool designed to help applicants practice before real interviews.',
+      'An AI tool for practicing job applications and mock interviews.',
     tech: ['AI', 'Interview Prep', 'Web App'],
     links: [],
   },
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     title: 'Barangay Document Request System',
     type: 'Web Application',
     description:
-      'A document request system for Santa Maria Barangay with customer support chatbot features and administrative workflows.',
+      'A web app for requesting barangay documents with support chatbot features.',
     tech: ['PHP', 'HTML', 'CSS', 'MySQL', 'Bootstrap'],
     links: [{ label: 'GitHub', url: 'https://github.com/JericoGarcia21/santamariabrgy_requestdocs' }],
   },
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     title: 'Recipe App',
     type: 'Mobile Application',
     description:
-      'A Flutter recipe mobile app using Firebase and API integration for recipe browsing and app data workflows.',
+      'A Flutter app for browsing recipes using Firebase and API data.',
     tech: ['Flutter', 'Firebase', 'API Integration'],
     links: [{ label: 'GitHub', url: 'https://github.com/JericoGarcia21/mad_recipeapp' }],
   },
@@ -121,7 +121,7 @@ export const experience = [
     period: 'July 2025 - Present',
     current: true,
     description:
-      'Teaching IT and programming subjects including web development, database systems, programming fundamentals, Linux basics, network scanning concepts, and Apache2 web application deployment.',
+      'Teaching IT and programming subjects such as web development, databases, programming basics, Linux basics, and web app deployment.',
     tags: ['Teaching', 'Web Development', 'Database Systems', 'Linux', 'Apache2', 'PHP', 'MySQL'],
   },
 ];
