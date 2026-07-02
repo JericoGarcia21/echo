@@ -85,7 +85,7 @@ function AppV1() {
     } else if (action === 'wallpaper') {
       toggleTheme();
     } else if (action === 'github') {
-      window.open('https://github.com/psuuc-jbgarcia', '_blank');
+      window.open('https://github.com/JericoGarcia21', '_blank');
     }
   };
 

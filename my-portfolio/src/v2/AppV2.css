@@ -98,8 +98,8 @@ body:has(.v2-shell) {
 
 .v2-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.75fr);
+  gap: 2.25rem;
   align-items: center;
   min-height: calc(100vh - 74px);
   padding: 3rem 0 4rem;
@@ -419,11 +419,15 @@ body:has(.v2-shell) {
 }
 
 .v2-section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
 }
 
 .v2-section-heading {
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: end;
+  max-width: none;
   margin-bottom: 1.5rem;
 }
 
@@ -433,6 +437,78 @@ body:has(.v2-shell) {
   color: #0f172a;
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.05;
+}
+
+.v2-senior-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 1rem;
+  padding-top: 0;
+}
+
+.v2-lead-panel,
+.v2-signal-grid article,
+.v2-principle-grid article {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
+}
+
+.v2-lead-panel {
+  padding: 1.4rem;
+}
+
+.v2-lead-panel span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #047857;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.v2-lead-panel h2 {
+  max-width: 760px;
+  margin-top: 0.75rem;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.v2-lead-panel p {
+  max-width: 760px;
+  margin-top: 1rem;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.v2-signal-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.v2-signal-grid article {
+  display: grid;
+  align-content: center;
+  min-height: 112px;
+  padding: 1rem;
+}
+
+.v2-signal-grid small {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.v2-signal-grid strong {
+  margin-top: 0.2rem;
+  color: #0f172a;
+  font-size: 1.05rem;
+  line-height: 1.2;
 }
 
 .v2-stats {
@@ -490,7 +566,7 @@ body:has(.v2-shell) {
 
 .v2-featured-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.9fr 0.95fr;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
   gap: 1rem;
 }
 
@@ -498,9 +574,13 @@ body:has(.v2-shell) {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 430px;
+  min-height: 470px;
   padding: 1.25rem;
   overflow: hidden;
+}
+
+.v2-project-card:first-child {
+  grid-row: span 2;
 }
 
 .v2-project-card:first-child {
@@ -646,6 +726,36 @@ body:has(.v2-shell) {
   margin-top: 1rem;
 }
 
+.v2-principles {
+  padding-top: 2rem;
+}
+
+.v2-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.v2-principle-grid article {
+  min-height: 180px;
+  padding: 1.2rem;
+}
+
+.v2-principle-grid span {
+  color: #047857;
+  font-size: 2.4rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.v2-principle-grid p {
+  margin-top: 1rem;
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
 .v2-project-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 0.35fr);
@@ -751,7 +861,10 @@ body:has(.v2-shell) {
   .v2-featured-grid,
   .v2-skill-grid,
   .v2-cert-grid,
-  .v2-focus-strip {
+  .v2-focus-strip,
+  .v2-senior-overview,
+  .v2-principle-grid,
+  .v2-section-heading {
     grid-template-columns: 1fr;
   }
 
@@ -761,6 +874,10 @@ body:has(.v2-shell) {
 
   .v2-project-card {
     min-height: auto;
+  }
+
+  .v2-project-card:first-child {
+    grid-row: auto;
   }
 }
 
@@ -851,6 +968,8 @@ body:has(.v2-shell) {
 .v2-hero-title strong,
 .v2-build-modes span,
 .v2-profile-panel h2,
+.v2-lead-panel h2,
+.v2-signal-grid strong,
 .v2-section-heading h2,
 .v2-focus-strip h3,
 .v2-project-card h3,
@@ -868,6 +987,9 @@ body:has(.v2-shell) {
 .v2-v1-callout,
 .v2-meta-row,
 .v2-build-modes strong,
+.v2-lead-panel p,
+.v2-signal-grid small,
+.v2-principle-grid p,
 .v2-profile-panel p:not(.v2-panel-eyebrow),
 .v2-project-card p,
 .v2-project-row p,
@@ -884,6 +1006,7 @@ body:has(.v2-shell) {
 
 .v2-kicker,
 .v2-section-heading span,
+.v2-lead-panel span,
 .v2-contact-label,
 .v2-hero-title,
 .v2-hero-title span,
@@ -892,6 +1015,7 @@ body:has(.v2-shell) {
 .v2-console-body span,
 .v2-console-body .success,
 .v2-stats strong,
+.v2-principle-grid span,
 .v2-focus-strip svg,
 .v2-card-topline,
 .v2-project-row > div:first-child span,
@@ -918,6 +1042,9 @@ body:has(.v2-shell) {
 .v2-v1-callout,
 .v2-meta-row span,
 .v2-build-modes article,
+.v2-lead-panel,
+.v2-signal-grid article,
+.v2-principle-grid article,
 .v2-profile-panel,
 .v2-project-card,
 .v2-project-row,
@@ -933,6 +1060,7 @@ body:has(.v2-shell) {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
+
 
 .v2-nav-links {
   color: var(--v2-muted);

@@ -81,7 +81,7 @@ const Dock: React.FC<DockProps> = ({ toggleWindow, openWindows, activeWindow, to
 
           <button
             className="dock-mobile-item"
-            onClick={() => window.open('https://github.com/psuuc-jbgarcia', '_blank')}
+            onClick={() => window.open('https://github.com/JericoGarcia21', '_blank')}
             aria-label="GitHub"
           >
             <div className="dock-icon" style={{ backgroundColor: '#333', color: '#fff' }}>
@@ -129,7 +129,7 @@ const Dock: React.FC<DockProps> = ({ toggleWindow, openWindows, activeWindow, to
       {/* GitHub Link */}
       <div
         className="dock-item-wrapper"
-        onClick={() => window.open('https://github.com/psuuc-jbgarcia', '_blank')}
+        onClick={() => window.open('https://github.com/JericoGarcia21', '_blank')}
         onMouseEnter={() => setHoveredApp('github')}
         onMouseLeave={() => setHoveredApp(null)}
       >

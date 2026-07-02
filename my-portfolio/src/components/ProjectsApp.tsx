@@ -7,8 +7,8 @@ const projects = [
     type: 'Static Website',
     tech: ['HTML', 'CSS', 'JavaScript'],
     links: [
-      { label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/firsttry' },
-      { label: 'Live Demo', url: 'https://psuuc-jbgarcia.github.io/firsttry/' }
+      { label: 'GitHub', url: 'https://github.com/JericoGarcia21/firsttry' },
+      { label: 'Live Demo', url: 'https://JericoGarcia21.github.io/firsttry/' }
     ]
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     tech: ['React', 'Node.js', 'MongoDB', 'Gemini AI', 'PWA', 'Tailwind CSS', 'Docker'],
     description: 'A comprehensive AI-driven platform that assists educators in evaluating handwritten and digital essays with automated scoring and feedback.',
     links: [
-      { label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/pen2grade' }
+      { label: 'GitHub', url: 'https://github.com/JericoGarcia21/pen2grade' }
     ]
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     tech: ['MongoDB', 'Express', 'React', 'Node.js'],
     description: 'An automatic evaluation and grading system for student project presentations, providing streamlined assessments and real-time feedback.',
     links: [
-      { label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/evalsys.git' },
+      { label: 'GitHub', url: 'https://github.com/JericoGarcia21/evalsys.git' },
       { label: 'Live Demo', url: 'https://evalsys-iota.vercel.app/' }
     ]
   },
@@ -43,8 +43,8 @@ const projects = [
     tech: ['Firebase', 'Python', 'YOLO', 'Flask', 'Computer Vision', 'Flutter'],
     description: 'An intelligent parking solution featuring automated plate recognition and real-time space tracking for efficient vehicle management.',
     links: [
-      { label: 'User Side', url: 'https://github.com/psuuc-jbgarcia/parkwatch_app' },
-      { label: 'Admin Side', url: 'https://github.com/psuuc-jbgarcia/parkwatch' }
+      { label: 'User Side', url: 'https://github.com/JericoGarcia21/parkwatch_app' },
+      { label: 'Admin Side', url: 'https://github.com/JericoGarcia21/parkwatch' }
     ]
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     type: 'Web Application',
     tech: ['PHP', 'HTML', 'CSS', 'MySQL', 'Bootstrap'],
     links: [
-      { label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/santamariabrgy_requestdocs' }
+      { label: 'GitHub', url: 'https://github.com/JericoGarcia21/santamariabrgy_requestdocs' }
     ]
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     type: 'Web Application',
     tech: ['PHP', 'MySQL', 'Bootstrap'],
     links: [
-      { label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/Recipe_System' }
+      { label: 'GitHub', url: 'https://github.com/JericoGarcia21/Recipe_System' }
     ]
   },
   {
@@ -68,7 +68,7 @@ const projects = [
     type: 'Mobile Application',
     tech: ['Flutter', 'Firebase', 'API Integration'],
     links: [
-      { label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/mad_recipeapp' }
+      { label: 'GitHub', url: 'https://github.com/JericoGarcia21/mad_recipeapp' }
     ]
   },
   {

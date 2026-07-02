@@ -24,7 +24,7 @@ export const profile = {
   availability: 'Available for web and mobile projects',
   email: 'garciajerico217@gmail.com',
   links: {
-    github: 'https://github.com/psuuc-jbgarcia',
+    github: 'https://github.com/JericoGarcia21',
     linkedin: 'https://www.linkedin.com/in/jerico-garcia-810b82354/',
     email: 'mailto:garciajerico217@gmail.com',
     v1: '/v1',
@@ -34,15 +34,15 @@ export const profile = {
 export const skills = [
   {
     group: 'Frontend',
-    items: ['React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
+    items: ['React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'PWA'],
   },
   {
     group: 'Backend',
-    items: ['Node.js', 'Express', 'PHP', 'Laravel', 'Python Flask', 'REST APIs'],
+    items: ['Node.js', 'Express', 'PHP', 'Laravel', 'Python Flask', 'REST APIs', 'API Integration'],
   },
   {
     group: 'Mobile',
-    items: ['Flutter', 'Dart', 'Firebase', 'API Integration'],
+    items: ['Flutter', 'Dart', 'Firebase'],
   },
   {
     group: 'Database and Tools',
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     description:
       'A teacher-focused platform for evaluating handwritten and digital essays with automated scoring, feedback workflows, and deployment-ready tooling.',
     tech: ['React', 'Node.js', 'MongoDB', 'Gemini AI', 'PWA', 'Tailwind CSS', 'Docker'],
-    links: [{ label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/pen2grade' }],
+    links: [{ label: 'GitHub', url: 'https://github.com/JericoGarcia21/pen2grade' }],
     featured: true,
   },
   {
@@ -71,7 +71,7 @@ export const projects: Project[] = [
       'A MERN application for student project presentation evaluation with structured scoring and streamlined assessment management.',
     tech: ['MongoDB', 'Express', 'React', 'Node.js'],
     links: [
-      { label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/evalsys.git' },
+      { label: 'GitHub', url: 'https://github.com/JericoGarcia21/evalsys.git' },
       { label: 'Live Demo', url: 'https://evalsys-iota.vercel.app/' },
     ],
     featured: true,
@@ -83,8 +83,8 @@ export const projects: Project[] = [
       'A parking management system with plate number recognition, Firebase-backed mobile workflows, and computer-vision processing.',
     tech: ['Flutter', 'Firebase', 'Python', 'YOLO', 'Flask', 'Computer Vision'],
     links: [
-      { label: 'User Side', url: 'https://github.com/psuuc-jbgarcia/parkwatch_app' },
-      { label: 'Admin Side', url: 'https://github.com/psuuc-jbgarcia/parkwatch' },
+      { label: 'User Side', url: 'https://github.com/JericoGarcia21/parkwatch_app' },
+      { label: 'Admin Side', url: 'https://github.com/JericoGarcia21/parkwatch' },
     ],
     featured: true,
   },
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     description:
       'A document request system for Santa Maria Barangay with customer support chatbot features and administrative workflows.',
     tech: ['PHP', 'HTML', 'CSS', 'MySQL', 'Bootstrap'],
-    links: [{ label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/santamariabrgy_requestdocs' }],
+    links: [{ label: 'GitHub', url: 'https://github.com/JericoGarcia21/santamariabrgy_requestdocs' }],
   },
   {
     title: 'Recipe App',
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     description:
       'A Flutter recipe mobile app using Firebase and API integration for recipe browsing and app data workflows.',
     tech: ['Flutter', 'Firebase', 'API Integration'],
-    links: [{ label: 'GitHub', url: 'https://github.com/psuuc-jbgarcia/mad_recipeapp' }],
+    links: [{ label: 'GitHub', url: 'https://github.com/JericoGarcia21/mad_recipeapp' }],
   },
 ];
 

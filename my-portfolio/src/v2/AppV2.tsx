@@ -25,6 +25,18 @@ import './AppV2.css';
 const featuredProjects = projects.filter((project) => project.featured);
 const otherProjects = projects.filter((project) => !project.featured);
 
+const engineeringPrinciples = [
+  'Design the user workflow before writing the interface.',
+  'Keep data models, API boundaries, and UI states easy to reason about.',
+  'Build maintainable systems that another developer can continue confidently.',
+];
+
+const deliverySignals = [
+  { label: 'Primary Focus', value: 'Web + Mobile' },
+  { label: 'Engineering Style', value: 'Product-minded' },
+  { label: 'System Strength', value: 'Full-stack delivery' },
+];
+
 function AppV2() {
   return (
     <main className="v2-shell">
@@ -53,10 +65,13 @@ function AppV2() {
           </div>
           <h1>{profile.name}</h1>
           <div className="v2-hero-title">
-            <span>{profile.title}</span>
+            <span>Senior {profile.title}</span>
             <strong>Web <i aria-hidden="true" /> Mobile</strong>
           </div>
-          <p className="v2-hero-summary">{profile.summary}</p>
+          <p className="v2-hero-summary">
+            I build production-minded web and mobile systems with practical architecture,
+            clear interfaces, and maintainable full-stack foundations.
+          </p>
           <div className="v2-hero-actions">
             <a className="v2-button primary" href="#projects">
               View Projects
@@ -79,18 +94,18 @@ function AppV2() {
           <div className="v2-build-modes" aria-label="Development focus">
             <article>
               <Globe2 size={20} />
-              <span>Website</span>
-              <strong>React UI, dashboards, portfolios</strong>
+              <span>Website Engineering</span>
+              <strong>React interfaces, dashboards, portfolios, and app workflows</strong>
             </article>
             <article>
               <Smartphone size={20} />
-              <span>Mobile</span>
-              <strong>Flutter apps, Firebase workflows</strong>
+              <span>Mobile Engineering</span>
+              <strong>Flutter apps, Firebase flows, and API-connected experiences</strong>
             </article>
             <article>
               <Cpu size={20} />
-              <span>Systems</span>
-              <strong>APIs, AI tools, databases</strong>
+              <span>Systems Thinking</span>
+              <strong>APIs, AI tools, databases, and deployment-aware decisions</strong>
             </article>
           </div>
         </div>
@@ -126,10 +141,10 @@ function AppV2() {
               <strong>echo://profile</strong>
             </div>
             <div className="v2-console-body">
-              <p><span>$</span> load focus</p>
-              <p>web apps / mobile apps / teaching tools</p>
-              <p><span>$</span> status</p>
-              <p className="success">available for selected builds</p>
+              <p><span>$</span> load portfolio</p>
+              <p>website + mobile project showcase</p>
+              <p><span>$</span> current mode</p>
+              <p className="success">open for selected projects</p>
             </div>
           </div>
 
@@ -144,18 +159,38 @@ function AppV2() {
         </aside>
       </section>
 
+      <section className="v2-section v2-senior-overview" aria-label="Senior engineering overview">
+        <div className="v2-lead-panel">
+          <span><Terminal size={16} /> Engineering Profile</span>
+          <h2>Product-focused execution with full-stack ownership.</h2>
+          <p>
+            This portfolio is organized around delivery: understanding the user problem,
+            selecting a practical stack, building the workflow, and keeping the system readable
+            enough to improve over time.
+          </p>
+        </div>
+        <div className="v2-signal-grid">
+          {deliverySignals.map((signal) => (
+            <article key={signal.label}>
+              <small>{signal.label}</small>
+              <strong>{signal.value}</strong>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="v2-section v2-stats" aria-label="Portfolio metrics">
         <div>
           <strong>{projects.length}+</strong>
-          <span>Portfolio projects</span>
+          <span>Delivered portfolio systems</span>
         </div>
         <div>
           <strong>{skills.reduce((total, group) => total + group.items.length, 0)}+</strong>
-          <span>Technologies and tools</span>
+          <span>Technologies across the stack</span>
         </div>
         <div>
           <strong>{certifications.length}</strong>
-          <span>Certifications</span>
+          <span>Verified technical credentials</span>
         </div>
       </section>
 
@@ -180,13 +215,13 @@ function AppV2() {
       <section className="v2-section" id="projects">
         <div className="v2-section-heading">
           <span><Rocket size={16} /> Selected Work</span>
-          <h2>Projects that show practical engineering range.</h2>
+          <h2>Case-study projects with architecture, workflow, and delivery context.</h2>
         </div>
 
         <div className="v2-featured-grid">
-          {featuredProjects.map((project) => (
+          {featuredProjects.map((project, index) => (
             <article className="v2-project-card featured" key={project.title}>
-              <div className="v2-project-index">0{featuredProjects.indexOf(project) + 1}</div>
+              <div className="v2-project-index">0{index + 1}</div>
               <div className="v2-project-meter" aria-hidden="true">
                 <span />
                 <span />
@@ -228,6 +263,21 @@ function AppV2() {
               <div className="v2-tags compact">
                 {project.tech.slice(0, 4).map((tech) => <span key={tech}>{tech}</span>)}
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="v2-section v2-principles" aria-label="Engineering principles">
+        <div className="v2-section-heading">
+          <span><Cpu size={16} /> Engineering Standards</span>
+          <h2>How I think about senior-level delivery.</h2>
+        </div>
+        <div className="v2-principle-grid">
+          {engineeringPrinciples.map((principle, index) => (
+            <article key={principle}>
+              <span>0{index + 1}</span>
+              <p>{principle}</p>
             </article>
           ))}
         </div>

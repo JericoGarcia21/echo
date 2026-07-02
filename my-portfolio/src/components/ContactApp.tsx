@@ -14,8 +14,8 @@ const ContactApp: React.FC = () => {
     {
       icon: <Github size={22} />,
       label: 'GitHub',
-      value: 'github.com/psuuc-jbgarcia',
-      href: 'https://github.com/psuuc-jbgarcia',
+      value: 'github.com/JericoGarcia21',
+      href: 'https://github.com/JericoGarcia21',
       color: '#1DE9B6',
     },
     {

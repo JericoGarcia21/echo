@@ -99,7 +99,7 @@ const COMMANDS: Record<string, (args: string[]) => Line[]> = {
     { type: 'blank', content: '' },
     { type: 'output', content: '{' },
     { type: 'success', content: '  "email":    "jbgarcia@psuuc.edu.ph",' },
-    { type: 'success', content: '  "github":   "github.com/psuuc-jbgarcia",' },
+    { type: 'success', content: '  "github":   "github.com/JericoGarcia21",' },
     { type: 'success', content: '  "linkedin": "linkedin.com/in/jbgarcia"' },
     { type: 'output', content: '}' },
     { type: 'blank', content: '' },

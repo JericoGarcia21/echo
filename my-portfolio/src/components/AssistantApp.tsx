@@ -27,7 +27,7 @@ const getLocalResponse = (text: string) => {
   }
 
   if (query.includes('contact') || query.includes('email') || query.includes('linkedin') || query.includes('github')) {
-    return 'Contact details: email jbgarcia@psuuc.edu.ph, GitHub github.com/psuuc-jbgarcia, LinkedIn linkedin.com/in/jbgarcia.';
+    return 'Contact details: email jbgarcia@psuuc.edu.ph, GitHub github.com/JericoGarcia21, LinkedIn linkedin.com/in/jbgarcia.';
   }
 
   if (query.includes('project')) {
